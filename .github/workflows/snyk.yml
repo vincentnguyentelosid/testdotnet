@@ -11,7 +11,9 @@ jobs:
         run: ls
       - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/dotnet@master
+        with:
+          name: testworkdir
+          path: /home/runner/work/testdotnet/testdotnet/testdotnetwebapi/testdotnetwebapi
         continue-on-error: true
-      - run: ls
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
