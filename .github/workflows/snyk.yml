@@ -7,8 +7,10 @@ jobs:
       - uses: actions/checkout@master
       - run: dotnet build testdotnetwebapi --configuration Release
       - run: cd testdotnetwebapi/testdotnetwebapi
+      - run: ls
       - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/dotnet@master
         continue-on-error: true
+      - run: ls
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
