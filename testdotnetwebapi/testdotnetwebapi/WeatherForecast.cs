@@ -10,5 +10,6 @@ namespace testdotnetwebapi
 
         public string? Summary { get; set; }
         public string? Notes { get; set; }
+        public string? Notes2 { get; set; }
     }
 }
