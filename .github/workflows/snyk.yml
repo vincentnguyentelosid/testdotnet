@@ -6,8 +6,9 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - run: dotnet build testdotnetwebapi --configuration Release
-      - run: cd testdotnetwebapi/testdotnetwebapi
-      - run: ls
+      - run: |
+            cd testdotnetwebapi/testdotnetwebapi
+            ls
       - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/dotnet@master
         continue-on-error: true
