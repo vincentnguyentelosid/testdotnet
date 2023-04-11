@@ -2,7 +2,7 @@ name: dotNET using Snyk
 on: push
 jobs:
   security:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@master
       - name: Run Snyk to check for vulnerabilities
